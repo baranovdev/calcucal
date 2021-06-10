@@ -2,7 +2,6 @@ package by.lebedev.calcucal
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import by.lebedev.calcucal.ui.main.MainFragment
 
 class MainActivity : AppCompatActivity() {
 

@@ -14,8 +14,15 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class MainViewModel(application: Application): AndroidViewModel(application) {
+
+
+
     private val mealRepository = MealRepository(MealDatabase.getDatabase(application))
     private val ioScope= CoroutineScope(Dispatchers.IO)
+
+    private val _caloriesSum = MutableLiveData<List<Meal>>()
+    val caloriesCum: LiveData<List<Meal>> = _caloriesSum
+
 
     private val _mealList = MutableLiveData<List<Meal>>()
     val mealList: LiveData<List<Meal>> = _mealList

@@ -19,7 +19,7 @@ class MealRepository(
         }
     }
 
-    suspend fun loadAllPerson(): List<Meal> {
+    suspend fun loadAllMeal(): List<Meal> {
         return ioScope.async { dao.getAll() }.await()
     }
 }

@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import by.lebedev.calcucal.R
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
 class MainFragment : Fragment() {
@@ -20,7 +21,8 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
+val floatButtonAddProduct = view.findViewById<FloatingActionButton>(R.id.floating_action_button)
+        floatButtonAddProduct.setOnClickListener { }
 
     }
 

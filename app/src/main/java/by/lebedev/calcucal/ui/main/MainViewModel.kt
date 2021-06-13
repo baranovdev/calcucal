@@ -7,7 +7,9 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import by.lebedev.calcucal.ui.main.database.MealDatabase
+import by.lebedev.calcucal.ui.main.database.MealDatabase_Impl
 import by.lebedev.calcucal.ui.main.database.entity.Meal
+import by.lebedev.calcucal.ui.main.database.entity.MealTypeName
 import by.lebedev.calcucal.ui.main.repository.MealRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -15,6 +17,7 @@ import kotlinx.coroutines.launch
 
 class MainViewModel(application: Application): AndroidViewModel(application) {
 
+    val names = enumValues<MealTypeName>().joinToString { it.type }.split(", ")
 
 
     private val mealRepository = MealRepository(MealDatabase.getDatabase(application))
@@ -22,7 +25,6 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
 
     private val _caloriesSum = MutableLiveData<List<Meal>>()
     val caloriesCum: LiveData<List<Meal>> = _caloriesSum
-
 
     private val _mealList = MutableLiveData<List<Meal>>()
     val mealList: LiveData<List<Meal>> = _mealList
@@ -38,7 +40,7 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
             _mealList.postValue(mealRepository.loadAllMeal())
         }
     }
-    fun addNewMeal(name:String, calories:Int){
+    fun addNewMeal(name:MealTypeName, calories:Int){
         mealRepository.insert(Meal(name, calories))
     }
 

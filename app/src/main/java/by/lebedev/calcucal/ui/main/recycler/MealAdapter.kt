@@ -16,7 +16,7 @@ class MealAdapter(private val meals:List<Meal>) : RecyclerView.Adapter<MealAdapt
             val meal = meals[position]
 
 
-            itemView.findViewById<TextView>(R.id.meal_name).text = meal.name
+            itemView.findViewById<TextView>(R.id.meal_name).text = meal.name.type
             itemView.findViewById<TextView>(R.id.meal_calories).text = meal.calories.toString()
         }
     }

@@ -1,6 +1,7 @@
 package by.lebedev.calcucal.ui.main.database.entity
 
-enum class MealTypeName(name:String) {
+enum class MealTypeName(val type:String) {
+
     BEEF("Говядина"),
     PORK("Свинина"),
     VEAL("Телятина"),
@@ -31,7 +32,9 @@ enum class MealTypeName(name:String) {
     ORANGE("Апельсин"),
     STRAWBERRY("Клубника"),
     PANCAKE("Блины"),
-    BORSCHT("Борщ")
+    BORSCHT("Борщ");
+
+
 
 
 }

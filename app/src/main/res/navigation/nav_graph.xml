@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="">
+    app:startDestination="@+id/mainFragment">
 
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="by.lebedev.calcucal.ui.main.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/showChooseProductFragment"
+            app:destination="@id/chooseProductFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chooseProductFragment"
+        android:name="by.lebedev.calcucal.ui.main.ChooseProductFragment"
+        android:label="ChooseProductFragment" >
+        <action
+            android:id="@+id/showMainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
 </navigation>

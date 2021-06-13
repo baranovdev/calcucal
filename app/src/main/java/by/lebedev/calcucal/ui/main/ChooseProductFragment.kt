@@ -24,6 +24,8 @@ class ChooseProductFragment : Fragment() {
         val items = listOf("Гречка", "Говядина", "Яблоки", "Бананы")
         val adapter = ArrayAdapter(requireContext(), R.layout.list_item, items)
         (textField.editText as? AutoCompleteTextView)?.setAdapter(adapter)
+
+
     }
 
     }

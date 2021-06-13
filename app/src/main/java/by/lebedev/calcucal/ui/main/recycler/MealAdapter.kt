@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import by.lebedev.calcucal.R
 import by.lebedev.calcucal.ui.main.database.entity.Meal
 
-class MealAdapter(private val meals:List<Meal>) : RecyclerView.Adapter<MealAdapter.MealViewHolder>() {
+class MealAdapter(var meals:List<Meal>) : RecyclerView.Adapter<MealAdapter.MealViewHolder>() {
 
     inner class MealViewHolder(private val view: View) : RecyclerView.ViewHolder(view){
         fun setData(itemView : View, position:Int){

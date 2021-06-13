@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "meal_table")
 data class Meal(
     @ColumnInfo(name = "meal_name")
-    val name: MealTypeName,
+    val name: String,
     @ColumnInfo(name = "meal_calories")
     val calories: Int
 ) {

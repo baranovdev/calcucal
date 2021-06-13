@@ -15,6 +15,7 @@ enum class MealTypeName(name:String) {
     SOFT_CHEESE("Мягкий сыр"),
     COTTAGE_CHEESE("Творог"),
     MANDARIN("Мандарин"),
+    BUCKWHEAT( "Гречка"),
     POTATO_PUREE("Пюре картофельное"),
     POTATO_FRIED("Жареный картофель"),
     RISE("Рис"),

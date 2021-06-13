@@ -1,41 +1,43 @@
 package by.lebedev.calcucal.ui.main
 
 import by.lebedev.calcucal.ui.main.database.entity.Meal
+import by.lebedev.calcucal.ui.main.database.entity.MealTypeName
 
 object MealList {
 
     val listOfMeal:List<Meal> = listOf(
-        Meal("Говядина", 191),
-        Meal("Свинина", 318),
-        Meal("Телятина",91),
-        Meal("Молоко",52),
-        Meal("Кефир",40),
-        Meal("Йогурт",60),
-        Meal("Окунь",123),
-        Meal("Сайра",257),
-        Meal("Семга",222),
-        Meal("Палтус",106),
-        Meal("Твердый сыр",352),
-        Meal("Мягкий сыр",27),
-        Meal("Творог",120),
-        Meal("Мандарин",133),
-        Meal("Гречка",120),
-        Meal("Картофельное пюре",74),
-        Meal("Жареная картошка",147),
-        Meal("Рис",143),
-        Meal("Перловка",111),
-        Meal("Пшено",95),
-        Meal("Огурец",14),
-        Meal("Банан",94),
-        Meal("Яйцо отварное",152),
-        Meal("Помидор",20),
-        Meal("Яблоко",57),
-        Meal("Хлеб черный",201),
-        Meal("Хлеб белый",253),
-        Meal("Апельсин",50),
-        Meal("Клубника",35),
-        Meal("Блины",234),
-        Meal("Борщ",50)
+
+        Meal(MealTypeName.BEEF, 191),
+        Meal(MealTypeName.PORK, 318),
+        Meal(MealTypeName.VEAL,91),
+        Meal(MealTypeName.MILK,52),
+        Meal(MealTypeName.KEFIR,40),
+        Meal(MealTypeName.YOGURT,60),
+        Meal(MealTypeName.PERCH,123),
+        Meal(MealTypeName.SAURY,257),
+        Meal(MealTypeName.SALMON,222),
+        Meal(MealTypeName.HALIBUT,106),
+        Meal(MealTypeName.HARD_CHEESE,352),
+        Meal(MealTypeName.SOFT_CHEESE,27),
+        Meal(MealTypeName.COTTAGE_CHEESE,120),
+        Meal(MealTypeName.MANDARIN,133),
+        Meal(MealTypeName.BUCKWHEAT,120),
+        Meal(MealTypeName.POTATO_PUREE,74),
+        Meal(MealTypeName.POTATO_FRIED,147),
+        Meal(MealTypeName.RISE,143),
+        Meal(MealTypeName.PEARL_BARLEY,111),
+        Meal(MealTypeName.MILLET,95),
+        Meal(MealTypeName.CUCUMBER,14),
+        Meal(MealTypeName.BANANA,94),
+        Meal(MealTypeName.BOILED_EGG,152),
+        Meal(MealTypeName.TOMATO,20),
+        Meal(MealTypeName.APPLE,57),
+        Meal(MealTypeName.BLACK_BREAD,201),
+        Meal(MealTypeName.WHITE_BREAD,253),
+        Meal(MealTypeName.ORANGE,50),
+        Meal(MealTypeName.STRAWBERRY,35),
+        Meal(MealTypeName.PANCAKE,234),
+        Meal(MealTypeName.BORSCHT,50)
     )
 
 }

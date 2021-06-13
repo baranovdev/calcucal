@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
 import by.lebedev.calcucal.R
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
@@ -23,9 +22,7 @@ class MainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 val floatButtonAddProduct = view.findViewById<FloatingActionButton>(R.id.floating_action_button)
-        floatButtonAddProduct.setOnClickListener {
-            findNavController().navigate(R.id.showChooseProductFragment)
-        }
+        floatButtonAddProduct.setOnClickListener { }
 
     }
 

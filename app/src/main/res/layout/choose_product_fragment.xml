@@ -12,9 +12,11 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="32dp"
+        app:errorEnabled="true"
         android:layout_marginHorizontal="16dp">
 
         <AutoCompleteTextView
+            android:id="@+id/input_name"
             android:hint="Meal"
             android:textSize="32sp"
             android:layout_width="match_parent"
@@ -43,6 +45,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
+        android:id="@+id/button_add"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"

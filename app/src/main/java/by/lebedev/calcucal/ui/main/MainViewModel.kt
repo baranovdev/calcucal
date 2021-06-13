@@ -19,15 +19,18 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
 
     val names = enumValues<MealTypeName>().joinToString { it.type }.split(", ")
 
-
     private val mealRepository = MealRepository(MealDatabase.getDatabase(application))
     private val ioScope= CoroutineScope(Dispatchers.IO)
 
-    private val _caloriesSum = MutableLiveData<List<Meal>>()
-    val caloriesCum: LiveData<List<Meal>> = _caloriesSum
+    private val _caloriesSum = MutableLiveData<Int>()
+    val caloriesSum: LiveData<Int> = _caloriesSum
 
     private val _mealList = MutableLiveData<List<Meal>>()
     val mealList: LiveData<List<Meal>> = _mealList
+
+    fun setNewSum( sum : Int){
+        _caloriesSum.value = sum
+    }
 
     fun insert(meal: Meal) {
         ioScope.launch {
@@ -41,7 +44,7 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
         }
     }
     fun addNewMeal(name:MealTypeName, calories:Int){
-        mealRepository.insert(Meal(name, calories))
+        mealRepository.insert(Meal(name.type, calories))
     }
 
 

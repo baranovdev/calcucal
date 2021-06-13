@@ -4,10 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
+import android.widget.AutoCompleteTextView
 import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import by.lebedev.calcucal.R
+import com.google.android.material.textfield.TextInputLayout
 
 class ChooseProductFragment : Fragment() {
 
@@ -21,14 +24,13 @@ class ChooseProductFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val items = listOf("Гречка", "Говядина", "Яблоки", "Бананы")
-        val adapter = ArrayAdapter(requireContext(), R.layout.list_item, items)
+
+        val textField = view.findViewById<TextInputLayout>(R.id.textField)
+        val items = listOf("zzzz", "Говядина", "Яблоки", "Бананы")
+        val adapter = ArrayAdapter(requireContext(), R.layout.item_list, items)
         (textField.editText as? AutoCompleteTextView)?.setAdapter(adapter)
 
 
     }
 
-    }
-
-
-
+}

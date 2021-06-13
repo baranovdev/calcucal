@@ -1,106 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="#03A9F4">
 
 
-    <Button
-        android:id="@+id/btn_garnir"
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="128dp"
-        android:layout_marginEnd="16dp"
-        android:backgroundTint="@color/black"
-        android:gravity="center"
-        android:text="ГАРНИРЫ"
-        android:textColor="#84F306"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btn_milk_product"
+
+    <AutoCompleteTextView
+        android:id="@+id/auto_complete"
+        android:hint="name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:backgroundTint="@color/black"
-        android:gravity="center"
-        android:text="МОЛОЧНЫЕ ПРОДУКТЫ"
-        android:textColor="#84F306"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_garnir" />
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
-    <Button
-        android:id="@+id/btn_vegetable"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:backgroundTint="@color/black"
-        android:gravity="center"
-        android:text="ОВОЩИ"
-        android:textColor="#84F306"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_milk_product" />
+    <!--    <Button-->
+    <!--        android:id="@+id/btn_garnir"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="16dp"-->
+    <!--        android:layout_marginTop="128dp"-->
+    <!--        android:layout_marginEnd="16dp"-->
+    <!--        android:backgroundTint="@color/black"-->
+    <!--        android:gravity="center"-->
+    <!--        android:text="ГАРНИРЫ"-->
+    <!--        android:textColor="#84F306"-->
+    <!--        android:textSize="24sp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
 
-    <Button
-        android:id="@+id/btn_fruit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:backgroundTint="@color/black"
-        android:gravity="center"
-        android:text="ФРУКТЫ"
-        android:textColor="#84F306"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_vegetable" />
+    <!--    <Button-->
+    <!--        android:id="@+id/btn_milk_product"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="16dp"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:layout_marginEnd="16dp"-->
+    <!--        android:backgroundTint="@color/black"-->
+    <!--        android:gravity="center"-->
+    <!--        android:text="МОЛОЧНЫЕ ПРОДУКТЫ"-->
+    <!--        android:textColor="#84F306"-->
+    <!--        android:textSize="24sp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/btn_garnir" />-->
 
-    <Button
-        android:id="@+id/btn_meat"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:backgroundTint="@color/black"
-        android:gravity="center"
-        android:text="МЯСО"
-        android:textColor="#84F306"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_fruit" />
+    <!--    <Button-->
+    <!--        android:id="@+id/btn_vegetable"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="16dp"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:layout_marginEnd="16dp"-->
+    <!--        android:backgroundTint="@color/black"-->
+    <!--        android:gravity="center"-->
+    <!--        android:text="ОВОЩИ"-->
+    <!--        android:textColor="#84F306"-->
+    <!--        android:textSize="24sp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/btn_milk_product" />-->
 
-    <Button
-        android:id="@+id/btn_fish"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:backgroundTint="@color/black"
-        android:gravity="center"
-        android:text="РЫБА"
-        android:textColor="#84F306"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_meat" />
+    <!--    <Button-->
+    <!--        android:id="@+id/btn_fruit"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="16dp"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:layout_marginEnd="16dp"-->
+    <!--        android:backgroundTint="@color/black"-->
+    <!--        android:gravity="center"-->
+    <!--        android:text="ФРУКТЫ"-->
+    <!--        android:textColor="#84F306"-->
+    <!--        android:textSize="24sp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/btn_vegetable" />-->
+
+    <!--    <Button-->
+    <!--        android:id="@+id/btn_meat"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="16dp"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:layout_marginEnd="16dp"-->
+    <!--        android:backgroundTint="@color/black"-->
+    <!--        android:gravity="center"-->
+    <!--        android:text="МЯСО"-->
+    <!--        android:textColor="#84F306"-->
+    <!--        android:textSize="24sp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/btn_fruit" />-->
+
+    <!--    <Button-->
+    <!--        android:id="@+id/btn_fish"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="16dp"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:layout_marginEnd="16dp"-->
+    <!--        android:backgroundTint="@color/black"-->
+    <!--        android:gravity="center"-->
+    <!--        android:text="РЫБА"-->
+    <!--        android:textColor="#84F306"-->
+    <!--        android:textSize="24sp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/btn_meat" />-->
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
